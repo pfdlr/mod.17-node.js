@@ -8,7 +8,7 @@ var hRest = (uptime % 3600);
 var minutes = Math.floor(hRest / 60);
 var seconds = hRest % 60;
 if (minutes < 10) {
-    minutes = '0' + seconds;
+    minutes = '0' + minutes;
 }
 if (seconds < 10) {
     seconds = '0' + seconds;
