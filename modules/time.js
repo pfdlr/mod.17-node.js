@@ -1,4 +1,5 @@
 var os = require('os');
+var colors = require('colors');
 function getTime() {
     var uptime = os.uptime();
     var days = Math.floor(uptime / (3600 * 24));
@@ -13,7 +14,7 @@ function getTime() {
     if (seconds < 10) {
         seconds = '0' + seconds;
     }
-    var time = "Uptime: " + days + " dni " + hours + " godz. " + minutes + " min. " + seconds + " sek.";
-    console.log(time);
+    var time = days + " dni " + hours + " godz. " + minutes + " min. " + seconds + " sek.";
+    console.log(colors.rainbow('Uptime: ') + time);
 }
 exports.print = getTime;
